@@ -3,278 +3,321 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shafey | Civil Engineer Portfolio</title>
+  <title>Shafey | Civil Engineer & BIM Specialist, India (Remote)</title>
+  <meta name="description" content="Shafey is a civil and structural engineer based in India, working remotely and specialising in BIM coordination, structural design and site execution for towers, retail and infrastructure." />
+  <meta name="theme-color" content="#060b16" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page-shell">
-    <header class="topbar">
-      <div class="container topbar-inner">
-        <a href="#home" class="brand">
-          <span class="brand-mark">SE</span>
-          <div>
-            <p>Shafey</p>
-            <span>Civil Engineer</span>
+  <canvas id="bg3d" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <div class="container topbar-inner">
+      <a href="#home" class="brand" aria-label="Shafey, home">
+        <span class="brand-mark">SE</span>
+        <div><p>Shafey</p><span>Civil Engineer</span></div>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#portfolio">Drawings</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle light and dark theme">☀️</button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><i class="dot"></i> Civil &amp; Structural Engineer · BIM Specialist</span>
+          <h1>Engineering the <span class="grad">skylines</span> that<br />hold the future up.</h1>
+          <p class="lead">Structural design, BIM coordination and site delivery for towers, retail destinations and infrastructure for clients worldwide, working remotely from India. Built to last, modelled to the millimetre.</p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary magnetic">View Projects</a>
+            <a href="#portfolio" class="btn btn-secondary magnetic">Explore the 3D Model</a>
           </div>
-        </a>
-        <nav class="nav-links" id="nav-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#portfolio">Drawings</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <div class="topbar-actions">
-          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☀️</button>
-          <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation">☰</button>
+          <dl class="hero-stats">
+            <div><dt><span data-count="10">0</span>+</dt><dd>Years of practice</dd></div>
+            <div><dt><span data-count="120">0</span>+</dt><dd>Projects delivered</dd></div>
+            <div><dt><span data-count="22">0</span>%</dt><dd>Less rework via BIM</dd></div>
+          </dl>
+        </div>
+        <div class="hero-hint" aria-hidden="true">
+          <span>Move your mouse to orbit</span>
+          <span class="scroll-cue">Scroll <i></i></span>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="hero section" id="home">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <span class="eyebrow">Civil Engineer / BIM Specialist</span>
-            <h1>Designing Sustainable Infrastructure & Smart Structures</h1>
-            <p>Strategic structural planning and execution for residential, commercial, and infrastructure projects with a focus on durability, efficiency, and innovation.</p>
-            <div class="hero-buttons">
-              <a href="#projects" class="btn btn-primary">View Projects</a>
-              <a href="#contact" class="btn btn-secondary">Contact Me</a>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="reveal">
+          <span class="section-label">About</span>
+          <h2>Structural thinking, from first sketch to final handover.</h2>
+          <p>I design and deliver reinforced-concrete and steel structures, and I run the BIM process that keeps architects, MEP and contractors on the same model. My work sits where analysis meets the site: calculations that make sense on the ground, and models that actually reduce rework.</p>
+          <p>I focus on durable, efficient structures and on sustainable choices that hold up in demanding climates, with tight programmes and real site constraints.</p>
+        </div>
+        <div class="skills reveal">
+          <div class="skill-card tilt">
+            <h3>Software</h3>
+            <div class="meters">
+              <div class="meter" style="--v:92"><span>Revit / BIM</span><b></b></div>
+              <div class="meter" style="--v:90"><span>AutoCAD</span><b></b></div>
+              <div class="meter" style="--v:88"><span>ETABS</span><b></b></div>
+              <div class="meter" style="--v:85"><span>STAAD Pro</span><b></b></div>
             </div>
           </div>
-          <div class="hero-visual">
-            <div class="blueprint-card">
-              <div class="blueprint-grid"></div>
-              <div class="hero-metrics">
-                <div>
-                  <h3>10+ Years</h3>
-                  <p>Engineering Excellence</p>
-                </div>
-                <div>
-                  <h3>120+</h3>
-                  <p>Delivered Projects</p>
+          <div class="skill-card tilt">
+            <h3>Core strengths</h3>
+            <ul class="chips">
+              <li>Structural Analysis</li><li>Site Management</li><li>Project Planning</li>
+              <li>Construction Coordination</li><li>Quality Assurance</li><li>Clash Detection</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Projects</span>
+          <h2>Selected work across buildings, retail and infrastructure.</h2>
+          <p>Three projects, three scales. Hover or touch a card to feel the depth.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card tilt reveal">
+            <div class="project-art" aria-hidden="true">
+              <svg viewBox="0 0 400 220"><defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs>
+                <g fill="url(#g1)" opacity=".9"><rect x="50" y="70" width="60" height="150"/><rect x="130" y="30" width="70" height="190"/><rect x="220" y="55" width="60" height="165"/><rect x="300" y="95" width="55" height="125"/></g>
+                <g stroke="#06101f" stroke-opacity=".5" stroke-width="2"><path d="M50 100h60M50 130h60M50 160h60M50 190h60M130 60h70M130 90h70M130 120h70M130 150h70M130 180h70M220 85h60M220 115h60M220 145h60M220 175h60M300 125h55M300 155h55M300 185h55"/></g>
+              </svg>
+            </div>
+            <div class="project-content">
+              <span class="tag">Residential · High-rise</span>
+              <h3>Urban Housing Complex</h3>
+              <p>Multi-tower residential scheme with resilient structural systems, efficient layouts and BIM-driven coordination across disciplines.</p>
+              <ul class="facts"><li><b>4</b> towers</li><li><b>G+32</b> floors</li><li><b>High-rise</b></li></ul>
+              <p class="meta"><strong>Role:</strong> Structural Lead Engineer · <strong>Tools:</strong> Revit, STAAD Pro, AutoCAD</p>
+            </div>
+          </article>
+          <article class="project-card tilt reveal">
+            <div class="project-art" aria-hidden="true">
+              <svg viewBox="0 0 400 220"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbbf24"/><stop offset="1" stop-color="#f97316"/></linearGradient></defs>
+                <rect x="30" y="110" width="340" height="110" fill="url(#g2)" opacity=".9"/>
+                <path d="M30 110 L100 60 H300 L370 110Z" fill="#fde68a" opacity=".85"/>
+                <g fill="#06101f" fill-opacity=".55"><rect x="55" y="140" width="50" height="80"/><rect x="125" y="140" width="50" height="80"/><rect x="195" y="140" width="50" height="80"/><rect x="265" y="140" width="50" height="80"/></g>
+                <g stroke="#06101f" stroke-opacity=".4" stroke-width="2"><path d="M100 60v50M200 60v50M300 60v50"/></g>
+              </svg>
+            </div>
+            <div class="project-content">
+              <span class="tag">Commercial · Mixed-use</span>
+              <h3>Mixed-Use Retail Center</h3>
+              <p>Structural solutions for a large retail destination with high-performance foundations and flexible, long-span floor design.</p>
+              <ul class="facts"><li><b>3</b> levels</li><li><b>Long-span</b> slabs</li><li><b>Retail</b></li></ul>
+              <p class="meta"><strong>Role:</strong> Project Engineer · <strong>Tools:</strong> ETABS, Revit, BIM</p>
+            </div>
+          </article>
+          <article class="project-card tilt reveal">
+            <div class="project-art" aria-hidden="true">
+              <svg viewBox="0 0 400 220"><defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+                <rect x="0" y="150" width="400" height="12" fill="url(#g3)"/>
+                <rect x="0" y="190" width="400" height="30" fill="#0b1b3a" opacity=".6"/>
+                <g stroke="url(#g3)" stroke-width="3" fill="none"><path d="M60 150 V50 M340 150 V50 M60 50 L110 150 M60 50 L160 150 M60 50 L210 150 M340 50 L290 150 M340 50 L240 150 M340 50 L190 150"/></g>
+                <g fill="#a78bfa"><rect x="52" y="45" width="16" height="110"/><rect x="332" y="45" width="16" height="110"/></g>
+              </svg>
+            </div>
+            <div class="project-content">
+              <span class="tag">Infrastructure · Transit</span>
+              <h3>Bridge &amp; Transit Corridor</h3>
+              <p>Coordinated structural design and site execution for a cable-stayed bridge link and transit corridor supporting safe, efficient movement.</p>
+              <ul class="facts"><li><b>Cable-stayed</b> span</li><li><b>3</b> flagship works</li><li><b>Ahead</b> of schedule</li></ul>
+              <p class="meta"><strong>Role:</strong> Civil Engineering Specialist · <strong>Tools:</strong> STAAD Pro, AutoCAD, BIM</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Experience</span>
+          <h2>A decade of delivering on site and on screen.</h2>
+        </div>
+        <div class="timeline">
+          <article class="exp-card tilt reveal">
+            <span class="when">2021 – Present</span>
+            <h3>Senior Civil Engineer</h3>
+            <p class="org">DesignWorks Engineering</p>
+            <p>Leading structural design and BIM coordination for high-rise residential and commercial developments, with optimised construction sequencing and stronger safety planning.</p>
+            <ul>
+              <li>Run multidisciplinary design reviews and stakeholder coordination.</li>
+              <li>Built model-based documentation that cut rework by 22%.</li>
+            </ul>
+          </article>
+          <article class="exp-card tilt reveal">
+            <span class="when">2017 – 2021</span>
+            <h3>Project Engineer</h3>
+            <p class="org">Infrastructure Solutions Ltd.</p>
+            <p>Executed infrastructure planning and quality assurance for bridges, roads and utility networks, focused on cost control, safety compliance and schedule performance.</p>
+            <ul>
+              <li>Delivered three flagship infrastructure projects ahead of schedule.</li>
+              <li>Monitored site progress and reviewed structural models.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DRAWINGS + BIM -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Drawings &amp; BIM</span>
+          <h2>Technical drawings and a live 3D model you can take apart.</h2>
+          <p>Sample sheets are drawn live in your browser. Switch to the BIM tab to rotate, explode and isolate the building.</p>
+        </div>
+
+        <div class="drawing-tabs reveal" role="tablist" aria-label="Drawing types">
+          <button role="tab" class="active" data-tab="plan" aria-selected="true">Floor Plan</button>
+          <button role="tab" data-tab="elev" aria-selected="false">Elevation</button>
+          <button role="tab" data-tab="sect" aria-selected="false">Section</button>
+          <button role="tab" data-tab="bim" aria-selected="false">3D BIM Model</button>
+        </div>
+
+        <div class="drawing-stage reveal">
+          <!-- FLOOR PLAN -->
+          <div class="pane active" id="pane-plan">
+            <svg viewBox="0 0 640 400" class="sheet" role="img" aria-label="Sample typical floor plan with structural grid">
+              <g class="grid-lines"><path d="M80 30V370M240 30V370M400 30V370M560 30V370M40 80H600M40 200H600M40 320H600"/></g>
+              <g class="grid-bubbles"><circle cx="80" cy="18" r="10"/><circle cx="240" cy="18" r="10"/><circle cx="400" cy="18" r="10"/><circle cx="560" cy="18" r="10"/>
+                <text x="80" y="22">A</text><text x="240" y="22">B</text><text x="400" y="22">C</text><text x="560" y="22">D</text></g>
+              <g class="walls"><rect x="80" y="80" width="480" height="240"/><path d="M240 80V200M240 260V320M400 80V150M400 210V320M240 200H320M400 200H480"/></g>
+              <g class="doors"><path d="M240 200 a40 40 0 0 1 40 -40"/><path d="M400 150 a30 30 0 0 1 30 30"/><path d="M320 80 a30 30 0 0 0 -30 30"/></g>
+              <g class="cols"><rect x="74" y="74" width="12" height="12"/><rect x="234" y="74" width="12" height="12"/><rect x="394" y="74" width="12" height="12"/><rect x="554" y="74" width="12" height="12"/><rect x="74" y="194" width="12" height="12"/><rect x="234" y="194" width="12" height="12"/><rect x="394" y="194" width="12" height="12"/><rect x="554" y="194" width="12" height="12"/><rect x="74" y="314" width="12" height="12"/><rect x="234" y="314" width="12" height="12"/><rect x="394" y="314" width="12" height="12"/><rect x="554" y="314" width="12" height="12"/></g>
+              <g class="dims"><path d="M80 350H560M80 344v12M240 344v12M400 344v12M560 344v12"/></g>
+              <g class="labels"><text x="150" y="150">LIVING</text><text x="305" y="125">BED 1</text><text x="470" y="125">BED 2</text><text x="150" y="270">KITCHEN</text><text x="305" y="290">CORE</text><text x="470" y="270">BALCONY</text><text x="320" y="364">3 × 8.0 m</text></g>
+            </svg>
+            <p class="caption">Typical floor · structural grid A–D · sample drawing</p>
+          </div>
+          <!-- ELEVATION -->
+          <div class="pane" id="pane-elev">
+            <svg viewBox="0 0 640 400" class="sheet" role="img" aria-label="Sample building elevation">
+              <path class="walls" d="M40 360H600"/>
+              <rect class="walls" x="170" y="60" width="300" height="300"/>
+              <rect class="walls" x="150" y="40" width="340" height="20"/>
+              <g class="grid-lines" id="elev-windows"></g>
+              <g class="dims"><path d="M520 60V360M514 60h12M514 360h12"/></g>
+              <g class="labels"><text x="535" y="215">+112.0 m</text><text x="300" y="385">SOUTH ELEVATION</text></g>
+            </svg>
+            <p class="caption">South elevation · curtain wall with structural fins · sample drawing</p>
+          </div>
+          <!-- SECTION -->
+          <div class="pane" id="pane-sect">
+            <svg viewBox="0 0 640 400" class="sheet" role="img" aria-label="Sample structural section">
+              <defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V6" stroke="currentColor" stroke-width="1"/></pattern></defs>
+              <path class="walls" d="M20 300H620"/>
+              <g id="sect-slabs"></g>
+              <g class="cols" id="sect-cols"></g>
+              <g class="walls"><rect x="150" y="300" width="340" height="30" fill="url(#hatch)"/><path d="M190 330v50M250 330v50M310 330v50M370 330v50M430 330v50M470 330v50"/></g>
+              <g class="dims"><path d="M110 60V300M104 60h12M104 300h12"/></g>
+              <g class="labels"><text x="20" y="190">+H</text><text x="505" y="320">RAFT 2.4 m</text><text x="505" y="360">BORED PILES</text><text x="270" y="30">TYPICAL SECTION</text></g>
+            </svg>
+            <p class="caption">Section through frame, raft and piles · sample drawing</p>
+          </div>
+          <!-- BIM -->
+          <div class="pane" id="pane-bim">
+            <div class="bim-wrap">
+              <canvas id="bim-canvas" aria-label="Interactive 3D building model. Drag to rotate."></canvas>
+              <div class="bim-tip" id="bim-tip" hidden></div>
+              <div class="bim-ui">
+                <label class="slider">Explode <input type="range" id="bim-explode" min="0" max="100" value="0" /></label>
+                <div class="layer-toggles" role="group" aria-label="Model layers">
+                  <button class="on" data-layer="structure">Structure</button>
+                  <button class="on" data-layer="facade">Façade</button>
+                  <button class="on" data-layer="mep">MEP</button>
+                  <button class="on" data-layer="core">Core</button>
                 </div>
               </div>
+              <p class="bim-hint">Drag to rotate · hover a floor for its level</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section section-sm fade-up" id="about">
-        <div class="container section-header">
-          <span class="section-label">About Me</span>
-          <h2>Professional civil engineering expertise with a precision-driven mindset.</h2>
-          <p>With extensive experience in structural design, site planning, and project delivery, I bring technical proficiency and leadership to every stage of construction. I specialize in smart building systems, BIM workflow, and sustainable engineering practices.</p>
-        </div>
-      </section>
-
-      <section class="section skills-section fade-up">
-        <div class="container skills-grid">
-          <div class="skill-card">
-            <h3>Technical Skills</h3>
-            <ul>
-              <li>AutoCAD</li>
-              <li>Revit</li>
-              <li>BIM</li>
-              <li>STAAD Pro</li>
-              <li>ETABS</li>
-            </ul>
-          </div>
-          <div class="skill-card">
-            <h3>Core Skills</h3>
-            <ul>
-              <li>Structural Analysis</li>
-              <li>Site Management</li>
-              <li>Project Planning</li>
-              <li>Construction Coordination</li>
-              <li>Quality Assurance</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section projects-section" id="projects">
-        <div class="container section-header">
-          <span class="section-label">Projects</span>
-          <h2>Selected work across buildings, commercial, and infrastructure.</h2>
-          <p>Each project blends structural integrity, efficient execution, and sustainable design to deliver strong long-term value.</p>
-        </div>
-        <div class="container projects-grid">
-          <article class="project-card fade-up">
-            <div class="project-image residential"></div>
-            <div class="project-content">
-              <span>Residential Buildings</span>
-              <h3>Urban Housing Complex</h3>
-              <p>Designed a multi-tower residential scheme with resilient structural systems, efficient layouts, and BIM-driven coordination.</p>
-              <ul>
-                <li><strong>Tools:</strong> Revit, STAAD Pro, AutoCAD</li>
-                <li><strong>Role:</strong> Structural Lead Engineer</li>
-              </ul>
-            </div>
-          </article>
-          <article class="project-card fade-up delay">
-            <div class="project-image commercial"></div>
-            <div class="project-content">
-              <span>Commercial Projects</span>
-              <h3>Mixed-Use Retail Center</h3>
-              <p>Delivered structural engineering solutions for a dynamic commercial center with high-performance foundations and flexible floor design.</p>
-              <ul>
-                <li><strong>Tools:</strong> ETABS, Revit, BIM</li>
-                <li><strong>Role:</strong> Project Engineer</li>
-              </ul>
-            </div>
-          </article>
-          <article class="project-card fade-up delay-2">
-            <div class="project-image infrastructure"></div>
-            <div class="project-content">
-              <span>Infrastructure Projects</span>
-              <h3>Bridge & Transit Corridor</h3>
-              <p>Coordinated structural design and site execution for a bridge link and transit corridor supporting safe, efficient movement.</p>
-              <ul>
-                <li><strong>Tools:</strong> STAAD Pro, AutoCAD, BIM</li>
-                <li><strong>Role:</strong> Civil Engineering Specialist</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section experience-section fade-up" id="experience">
-        <div class="container section-header">
-          <span class="section-label">Experience</span>
-          <h2>Career highlights and engineering achievements.</h2>
-        </div>
-        <div class="container experience-list">
-          <article class="experience-card">
-            <div class="experience-meta">
-              <span>2021 - Present</span>
-              <h3>Senior Civil Engineer</h3>
-              <p>DesignWorks Engineering</p>
-            </div>
-            <div class="experience-details">
-              <p>Leading structural design and BIM coordination for high-rise residential and commercial developments. Delivered optimized construction sequencing and enhanced safety planning.</p>
-              <ul>
-                <li>Managed multidisciplinary design reviews and stakeholder coordination.</li>
-                <li>Developed model-based documentation to reduce rework by 22%.</li>
-              </ul>
-            </div>
-          </article>
-          <article class="experience-card">
-            <div class="experience-meta">
-              <span>2017 - 2021</span>
-              <h3>Project Engineer</h3>
-              <p>Infrastructure Solutions Ltd.</p>
-            </div>
-            <div class="experience-details">
-              <p>Executed infrastructure planning and quality assurance for bridges, roads, and utility networks. Focused on cost control, safety compliance, and schedule performance.</p>
-              <ul>
-                <li>Delivered three flagship infrastructure projects ahead of schedule.</li>
-                <li>Monitored site progress and reviewed structural models.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section portfolio-section" id="portfolio">
-        <div class="container section-header">
-          <span class="section-label">Drawings & Portfolio</span>
-          <h2>Technical drawings, BIM models, and construction visuals.</h2>
-        </div>
-        <div class="container portfolio-grid fade-up">
-          <div class="portfolio-card">
-            <div class="portfolio-icon">⛏️</div>
-            <h4>Floor Plans</h4>
-            <p>Detailed plan layout for building programs and spatial coordination.</p>
-          </div>
-          <div class="portfolio-card">
-            <div class="portfolio-icon">📐</div>
-            <h4>Elevations</h4>
-            <p>Elevational drawings for façade design and structural alignment.</p>
-          </div>
-          <div class="portfolio-card">
-            <div class="portfolio-icon">📏</div>
-            <h4>Sections</h4>
-            <p>Cross-sections illustrating structural depth and material interfaces.</p>
-          </div>
-          <div class="portfolio-card">
-            <div class="portfolio-icon">🧭</div>
-            <h4>BIM Models</h4>
-            <p>Model-based delivery for coordination, clash detection, and construction planning.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section certifications-section fade-up">
-        <div class="container section-header">
-          <span class="section-label">Certifications</span>
-          <h2>Professional credentials supporting engineering excellence.</h2>
-        </div>
-        <div class="container certification-grid">
-          <div class="cert-card">
-            <h4>Professional Engineer (PE)</h4>
-            <p>Licensed civil engineer focused on structural safety and compliance.</p>
-          </div>
-          <div class="cert-card">
-            <h4>BIM Management Certification</h4>
-            <p>Advanced BIM workflows for design coordination and model quality.</p>
-          </div>
-          <div class="cert-card">
-            <h4>LEED Green Associate</h4>
-            <p>Credential in sustainable building design and environmental performance.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="container contact-grid fade-up">
-          <div class="contact-info">
-            <span class="section-label">Contact</span>
-            <h2>Let’s talk about your next project.</h2>
-            <p>Ready to deliver structural design, BIM strategy, and site execution that stands strong.</p>
-            <div class="contact-details">
-              <div><strong>Email:</strong> hello@shafeyengineer.com</div>
-              <div><strong>Phone:</strong> +1 (123) 456-7890</div>
-              <div><strong>Location:</strong> Dubai, UAE</div>
-              <div><strong>LinkedIn:</strong> linkedin.com/in/shafey-engineer</div>
-            </div>
-            <a href="#" class="btn btn-primary">Download Resume</a>
-          </div>
-          <form class="contact-form" action="#" method="post">
-            <label>
-              <span>Name</span>
-              <input type="text" name="name" placeholder="Your name" required />
-            </label>
-            <label>
-              <span>Email</span>
-              <input type="email" name="email" placeholder="you@example.com" required />
-            </label>
-            <label>
-              <span>Message</span>
-              <textarea name="message" rows="6" placeholder="Tell me about your project" required></textarea>
-            </label>
-            <button type="submit" class="btn btn-secondary">Send Message</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-inner">
-        <p>© 2026 Shafey. All rights reserved.</p>
-        <div class="social-links">
-          <a href="#">LinkedIn</a>
-          <a href="#">Behance</a>
-          <a href="#">GitHub</a>
         </div>
       </div>
-    </footer>
-  </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="section" id="credentials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Credentials</span>
+          <h2>Qualified, licensed and certified.</h2>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-card tilt reveal"><span class="cert-ic">🏛️</span><h4>B.Sc. Civil Engineering</h4><p class="muted">Add university &amp; year</p><p>Foundation in structural mechanics, geotechnics and construction management.</p></div>
+          <div class="cert-card tilt reveal"><span class="cert-ic">📜</span><h4>Professional Engineer (PE)</h4><p class="muted">Add issuing body &amp; licence no.</p><p>Licensed civil engineer focused on structural safety and compliance.</p></div>
+          <div class="cert-card tilt reveal"><span class="cert-ic">🧊</span><h4>BIM Management Certification</h4><p class="muted">Add issuer &amp; year</p><p>Advanced BIM workflows for design coordination and model quality.</p></div>
+          <div class="cert-card tilt reveal"><span class="cert-ic">🌿</span><h4>LEED Green Associate</h4><p class="muted">USGBC · add year</p><p>Credential in sustainable building design and environmental performance.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="section-label">Contact</span>
+          <h2>Let’s build your next project.</h2>
+          <p>Structural design, BIM strategy and site execution you can rely on. Tell me about your project and I’ll reply within two working days.</p>
+          <ul class="contact-details">
+            <li><span>Email</span><a href="mailto:shafeykhan007@gmail.com">shafeykhan007@gmail.com</a></li>
+            <li><span>Phone</span><a href="tel:+918421297861">+91 84212 97861</a></li>
+            <li><span>Location</span>India · Remote</li>
+            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/shafey-khan-34896917a/" target="_blank" rel="noopener">linkedin.com/in/shafey-khan-34896917a</a></li>
+          </ul>
+          <button type="button" class="btn btn-primary magnetic" id="resume-btn">Download Resume</button>
+        </div>
+        <form class="contact-form tilt reveal" id="contact-form">
+          <label><span>Name</span><input type="text" name="name" placeholder="Your name" required autocomplete="name" /></label>
+          <label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required autocomplete="email" /></label>
+          <label><span>Message</span><textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea></label>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note" id="form-note" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Shafey. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/shafey-khan-34896917a/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/mubasshir10" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:shafeykhan007@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
